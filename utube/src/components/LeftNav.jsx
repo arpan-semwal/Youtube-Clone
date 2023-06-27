@@ -27,7 +27,7 @@ const LeftNav = () => {
             {
                 categories.map((item) => {
                     return(
-                        <React.Fragment>
+                        <React.Fragment key={item.name}>
                             <LeftNavMenuItem
                             text={item.type === 'home' ? "Home" : item.name}
                             icon = {item.icon}
