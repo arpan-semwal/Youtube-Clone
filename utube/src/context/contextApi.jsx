@@ -19,7 +19,7 @@ export const AppContext = (props) => {
         setLoading(true);
         fetchDataFromApi(`search/?q=${query}`) .then(({contents}) => { //destructuring contents from api
             console.log(contents);
-            // setSearchResults(res);
+            setSearchResults(contents);
             setLoading(false);
         })
     }
