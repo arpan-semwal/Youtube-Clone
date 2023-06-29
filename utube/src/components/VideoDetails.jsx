@@ -21,8 +21,8 @@ const VideoDetails = () => {
 
   useEffect(() => {
     document.getElementById("root").classList.add("custom-h"),
-    fetchVideoDetails(),
-    fetchRelatedVideos()
+     fetchVideoDetails(),
+     fetchRelatedVideos()
 
   } , [id]);
 
@@ -48,20 +48,27 @@ const VideoDetails = () => {
 
 
   return (
+
+    // for video player
     <div className='flex justify-center flex-row h-[calc(100%-56px)] bg-black'>
       <div className='w-full max-w-[1280px] flex flex-col lg:flex-row'>
         <div className='flex flex-col lg:w-[calc(100%-350px)] xl:w-[calc(100%-400px)] px-4 py-3 lg:py-6 overflow-y-auto'>
           <div className='h-[200px] md:h-[400px] xl:h-[550px] ml-[-16px] lg:ml-0 mr-[-16px] lg:mr-0'>
-      <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`}
-      controls
-      width="100%"
-      height="100%"
-      style={{backgroundColor: "#000000"}}
-      />
-      </div>
-      </div>
+                <ReactPlayer url={``}
+                 controls
+                  width="100%"
+                  height="100%"
+                  style={{backgroundColor: "#000000"}}
+          />
+        </div>
+
+
+        <div className='text-white font-bold text-sm md:text-xl mt-4 line-clamp '>
+          {video?.title}
+        </div>
       </div>
     </div>
+  </div>
   )
 }
 

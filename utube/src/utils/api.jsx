@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const BASE_URL = "https://youtube138.p.rapidapi.com";
-const API_KEY = " 1bc9c21af7msha197c3bcd45011ap1fb6c5jsn4d7b0b8d6753";
+const API_KEY = " d2f9c2a3edmsh3f4f53e2aa3af46p1fd24djsn003570165022";
 const options = {
    
   
