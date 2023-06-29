@@ -16,7 +16,7 @@ const Feed = () => {
       
       <div className="grow w-[calc(100% - 240px)] h-full overflow-y-auto bg-black">
         {!loading &&
-          Array.isArray(searchResults) &&
+          searchResults &&
           searchResults.map((item) => {
             if (item.type !== 'video') return null;
             return (<VideoCard key={item?.video?.videoId} video={item.video} />);
