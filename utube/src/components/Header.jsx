@@ -78,7 +78,7 @@ const Header = () => {
 
          {/* search button */}
 
-         <button className='w--[40px] md:w-[60px] h-8 md:h-10 flex items-center justify-center border border-l-0 border-[#303030] rounded-tr-4xl bg-white/[0.1]' >
+         <button className='w--[40px] md:w-[60px] h-8 md:h-10 flex items-center justify-center border border-l-0 border-[#303030] rounded-tr-4xl bg-white/[0.1]' onClick={() => searchQueryHandler("searchButton")}>
             <IoIosSearch className="text-white text-xl"/>
          </button>
       </div>
@@ -95,13 +95,14 @@ const Header = () => {
               <div className='flex items-center justify-center  ml-2 h-10 w-10 rounded-full hover:bg-[#3030303]/0.6'>
                 <FiBell className='text-white text-xl cursor-pointer'/>
               </div>
-              <div className='flex h-8 w-8 overflow-hidden rounded-full md:ml-4'>
+             
+        </div>
+        <div className='flex h-8 w-8 overflow-hidden rounded-full md:ml-4'>
                   <img src='https://robohash.org/stefan-one'/>
               </div>
-        </div>
       </div>
 
-    </div>// px" stands for horizontal padding (left and right)."4" specifies the padding size."md" is a responsive breakpoint. It indicates that the following utility class will apply only when the screen size is medium or larger.
+  </div>// px" stands for horizontal padding (left and right)."4" specifies the padding size."md" is a responsive breakpoint. It indicates that the following utility class will apply only when the screen size is medium or larger.
   )
 }
 

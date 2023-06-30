@@ -8,21 +8,26 @@ const LeftNav = () => {
     const { selectedCatagories , setSelectedCatagories , mobileMenu} = useContext(Context);
     const navigate = useNavigate();
 
-    const clickHandler = (name , type) => {
+    const clickHandler = (name, type) => {
         switch (type) {
-            case "category":
-                return setSelectedCatagories(name);
-            case "home":
-                return setSelectedCatagories(name);
-            case "menu":
-                return false;
-            default:
-                break;
+          case "category":
+            setSelectedCatagories(name);
+            break;
+          case "home":
+            setSelectedCatagories(name);
+            navigate("/");
+            break;
+          case "menu":
+            return false;
+          default:
+            break;
         }
-    }
+      };
+      
 
   return (
-    <div className=' flex fixed md:block w-[240px]  overflow-y-auto   py-4 bg-black   z-10 md:translate-x-0 transition-all'>
+    <div className=
+    {`md:block w-[240px] overflow-y-auto h-full py-3 bg-black absolute md:relative z-10 translate-x-[-240px] md:translate-x-0 transition-all ${mobileMenu ? "translate-x-0 ": "" }`}>
         <div className='flex px-5 flex-col'>
             {
                 categories.map((item) => {
